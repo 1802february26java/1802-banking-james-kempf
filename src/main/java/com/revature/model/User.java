@@ -33,16 +33,20 @@ public class User {
 	}
 
 	public void deposit(double sum) {
-		balance += sum;
-		transactions.add("Deposit: " + sum + " - " + LocalDateTime.now());
+		if(sum > 0) {
+			balance += sum;
+			transactions.add("Deposit: " + sum + " - " + LocalDateTime.now());
+		}
 	}
 	
 	public void withdraw(double sum) throws InsufficientBalanceException {
-		if (balance >= sum) {
-			balance -= sum;
-			transactions.add("Withdraw: " + sum + " - " + LocalDateTime.now());
-		} else {
-			throw new InsufficientBalanceException("Insufficient Balance: " + balance);
+		if(sum > 0) {
+ 			if (balance >= sum) {
+				balance -= sum;
+				transactions.add("Withdraw: " + sum + " - " + LocalDateTime.now());
+			} else {
+				throw new InsufficientBalanceException("Insufficient Balance: " + balance);
+			}
 		}
 	}
 	
@@ -56,7 +60,7 @@ public class User {
 	
 	// Authenticates a user when logging in
 	public boolean authenticate(String username, String password) throws InvalidCredentialsException {
-		if(this.username == username && this.password == password) {
+		if(this.username.equals(username) && this.password.equals(password)) {
 			return true;
 		} else {
 			throw new InvalidCredentialsException("Invalid username or password");
