@@ -10,30 +10,29 @@ import com.revature.model.User;
 
 public class Controller {
 
-	private static Controller controller = new Controller();
-	private HashMap<String, User> users = new HashMap<>();
+	private static final Controller controller = new Controller();
+	private HashMap<String, User> users;
 	private User currentUser;
 	
-	public static Controller getController() {
+	public static Controller getInstance() {
 		return controller;
 	}
 	
 	// start input scanner and complete commands
 	public void start() {
 		Scanner input = new Scanner (System.in);
-		
 		while (input.hasNext()) {
 			String[] command = input.nextLine().split(" ");
 			switch(command[0]) {
 			case "register":
-				if(command.length == 4) {
-					register(command[1], command[2], command[3]);
+				if (command.length == 3) {
+					register(command[1], command[2]);
 				} else {
 					System.out.println("Invalid Parameters");
 				}
 				break;
 			case "login":
-				if(command.length == 3) {
+				if (command.length == 3) {
 					login(command[1], command[2]);
 				} else {
 					System.out.println("Invalid Parameters");
@@ -46,14 +45,14 @@ public class Controller {
 				viewBalance();
 				break;
 			case "deposit":
-				if(command.length == 2) {
+				if (command.length == 2) {
 					deposit(Double.parseDouble(command[1]));
 				} else {
 					System.out.println("Invalid Parameters");
 				}
 				break;
 			case "withdraw":
-				if(command.length == 2) {
+				if (command.length == 2) {
 					withdraw(Double.parseDouble(command[1]));
 				} else {
 					System.out.println("Invalid Parameters");
@@ -63,7 +62,13 @@ public class Controller {
 				printTransactions();
 				break;
 			case "exit":
+				if (currentUser != null) {
+					logout();
+				}
 				System.exit(0);
+				break;
+			default:
+				System.out.println("Invalid Command");
 				break;
 			}
 		}
@@ -71,40 +76,52 @@ public class Controller {
 	}
 	
 	// Add new user
-	public void register(String name, String username, String password) {
-		User newUser = new User(name, username, password);
-		users.put(username, newUser);
-		System.out.println(newUser.toString());
-	}
-	
-	// Log in user. Checks username and password
-	public void login(String username, String password) {
-		try {
-			User u = users.get(username);
-			if(u.authenticate(username, password)) {
-				currentUser = u;
-				System.out.println("Login Successful");
-			}
-		} catch(InvalidCredentialsException e) {
-			System.out.println(e.getMessage());
-		} catch(NullPointerException e) {
-			System.out.println("Invalid Credentials");
+	public boolean register(String username, String password) {
+		if (users.containsKey(username)) {
+			System.out.println("Username Is Already In User");
+			return false;
+		} else {
+			User newUser = new User(username, password);
+			users.put(username, newUser);
+			System.out.println(newUser.toString());
+			return true;
 		}
 	}
 	
+	// Log in user. Checks username and password
+	public boolean login(String username, String password) {
+		try {
+			User u = users.get(username);
+			if (currentUser == u) {
+				System.out.println("Already Logged In");
+			} else if (u.authenticate(username, password)) {
+				currentUser = u;
+				System.out.println("Login Successful");
+				return true;
+			}
+		} catch (InvalidCredentialsException e) {
+			System.out.println(e.getMessage());
+		} catch (NullPointerException e) {
+			System.out.println("Invalid Credentials");
+		}
+		return false;
+	}
+	
 	// Set current user to null
-	public void logout() {
-		if(currentUser == null) {
-			System.out.println("Already logged out");
+	public boolean logout() {
+		if (currentUser == null) {
+			System.out.println("Already Logged Out");
+			return false;
 		} else {
 			currentUser = null;
 			System.out.println("Logout Successful");
+			return true;
 		}
 	}
 	
 	// Prints balance of current user
 	public void viewBalance() {
-		if(currentUser == null) {
+		if (currentUser == null) {
 			System.out.println("Please login");
 		} else {
 			System.out.println("Current Balance: " + currentUser.getBalance());
@@ -112,41 +129,49 @@ public class Controller {
 	}
 	
 	// Deposit sum for current user
-	public void deposit(double sum) {
-		if(currentUser == null) {
+	public boolean deposit(double sum) {
+		if (currentUser == null) {
 			System.out.println("Please login");
 		} else if(sum <= 0) {
 			System.out.println("Insufficient Sum");
 		} else {
 			currentUser.deposit(sum);
 			System.out.println("Deposit Successful");
+			return true;
 		}
+		return false;
 	}
 	
 	// Withdraw a sum from current user
-	public void withdraw(double sum) {
-		if(currentUser == null) {
+	public boolean withdraw(double sum) {
+		if (currentUser == null) {
 			System.out.println("Please login");
-		} else if(sum <= 0) {
+		} else if (sum <= 0) {
 			System.out.println("Insufficient Sum");
 		} else {
 			try {
 				currentUser.withdraw(sum);
 				System.out.println("Withdraw Successful");
-			} catch(InsufficientBalanceException e) {
+				return true;
+			} catch (InsufficientBalanceException e) {
 				System.out.println(e.getMessage());
 			}
 		}
+		return false;
 	}
 	
 	// Prints transactions of current user
 	public void printTransactions() {
-		if(currentUser == null) {
-			System.out.println("Please login");
+		if (currentUser == null) {
+			System.out.println("Please Login");
 		} else {
 			ArrayList<String> transactions = currentUser.getTransactions();
-			for(String i: transactions) {
-				System.out.println(i);
+			if (transactions.isEmpty()) {
+				System.out.println("No Transactions");
+			} else {
+				for (String i: transactions) {
+					System.out.println(i);
+				}
 			}
 		}
 	}

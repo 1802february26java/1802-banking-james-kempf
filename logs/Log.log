@@ -1,0 +1,61 @@
+2018-03-07 16:07:35 INFO  ConnectionUtil:23 - Connection successful
+2018-03-07 16:24:15 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-07 16:24:15 TRACE ConnectionUtil:14 - Getting connection
+2018-03-07 16:24:16 INFO  UserRepositoryJdbc:39 - Insert success
+2018-03-07 16:24:16 TRACE UserRepositoryJdbc:50 - Selecting all users
+2018-03-07 16:24:16 TRACE ConnectionUtil:14 - Getting connection
+2018-03-07 16:24:41 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-07 16:24:41 TRACE ConnectionUtil:14 - Getting connection
+2018-03-07 16:24:42 ERROR UserRepositoryJdbc:43 - Exception thrown while inserting new User
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (BANKING_DB.PK_USERS) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.insertUser(UserRepositoryJdbc.java:38)
+	at com.revature.repository.UserRepositoryJdbc.main(UserRepositoryJdbc.java:100)
+2018-03-07 16:24:42 TRACE UserRepositoryJdbc:50 - Selecting all users
+2018-03-07 16:24:42 TRACE ConnectionUtil:14 - Getting connection
+2018-03-07 16:33:52 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-07 16:33:52 TRACE ConnectionUtil:14 - Getting connection
+2018-03-07 16:33:53 INFO  UserRepositoryJdbc:39 - Insert success
+2018-03-07 16:33:53 TRACE UserRepositoryJdbc:50 - Selecting all users
+2018-03-07 16:33:53 TRACE ConnectionUtil:14 - Getting connection
+2018-03-07 16:33:53 TRACE UserRepositoryJdbc:74 - Selecting user by username
+2018-03-07 16:33:53 TRACE ConnectionUtil:14 - Getting connection
+2018-03-07 16:43:31 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-07 16:43:31 TRACE ConnectionUtil:14 - Getting connection
+2018-03-07 16:43:33 ERROR UserRepositoryJdbc:43 - Exception thrown while inserting new User
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (BANKING_DB.PK_USERS) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.insertUser(UserRepositoryJdbc.java:38)
+	at com.revature.repository.UserRepositoryJdbc.main(UserRepositoryJdbc.java:125)
+2018-03-07 16:43:33 TRACE UserRepositoryJdbc:50 - Selecting all users
+2018-03-07 16:43:33 TRACE ConnectionUtil:14 - Getting connection
+2018-03-07 16:43:33 TRACE UserRepositoryJdbc:74 - Selecting user by username
+2018-03-07 16:43:33 TRACE ConnectionUtil:14 - Getting connection
+2018-03-07 16:43:33 TRACE UserRepositoryJdbc:99 - Updating balance
+2018-03-07 16:43:33 TRACE ConnectionUtil:14 - Getting connection
