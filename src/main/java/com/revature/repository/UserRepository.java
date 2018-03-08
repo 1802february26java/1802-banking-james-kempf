@@ -19,12 +19,17 @@ public interface UserRepository {
 	/**
 	 * Select one user based on username
 	 */
-	public User findUserByUsername(String username);
+	public User getUserByUsername(String username);
 	
 	/**
 	 * Set balance of user to specified balance
 	 */
 	public boolean updateBalance(User user, double balance);
+	
+	/**
+	 * Get the current balance for user
+	 */
+	public double getBalance(User user);
 	
 	/**
 	 * view all transactions of current user

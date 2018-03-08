@@ -59,3 +59,228 @@ java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint 
 2018-03-07 16:43:33 TRACE ConnectionUtil:14 - Getting connection
 2018-03-07 16:43:33 TRACE UserRepositoryJdbc:99 - Updating balance
 2018-03-07 16:43:33 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 09:01:57 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-08 09:01:57 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 09:01:58 ERROR UserRepositoryJdbc:43 - Exception thrown while inserting new User
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (BANKING_DB.PK_USERS) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.insertUser(UserRepositoryJdbc.java:38)
+	at com.revature.repository.UserRepositoryJdbc.main(UserRepositoryJdbc.java:146)
+2018-03-08 09:01:58 TRACE UserRepositoryJdbc:50 - Selecting all users
+2018-03-08 09:01:58 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 09:01:58 TRACE UserRepositoryJdbc:74 - Selecting user by username
+2018-03-08 09:01:58 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 09:01:59 TRACE UserRepositoryJdbc:99 - Updating balance
+2018-03-08 09:01:59 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 09:01:59 TRACE UserRepositoryJdbc:117 - Getting balance
+2018-03-08 09:01:59 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 09:14:51 TRACE UserRepositoryJdbc:74 - Selecting user by username
+2018-03-08 09:14:51 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 09:19:48 TRACE UserRepositoryJdbc:74 - Selecting user by username
+2018-03-08 09:19:48 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 10:05:00 TRACE UserRepositoryJdbc:74 - Selecting user by username
+2018-03-08 10:05:00 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 10:06:40 TRACE UserRepositoryJdbc:74 - Selecting user by username
+2018-03-08 10:06:40 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 10:07:40 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-08 10:07:40 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 10:07:41 ERROR UserRepositoryJdbc:43 - Exception thrown while inserting new User
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (BANKING_DB.PK_USERS) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.insertUser(UserRepositoryJdbc.java:38)
+	at com.revature.repository.UserRepositoryJdbc.main(UserRepositoryJdbc.java:146)
+2018-03-08 10:07:41 TRACE UserRepositoryJdbc:50 - Selecting all users
+2018-03-08 10:07:41 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 10:07:42 TRACE UserRepositoryJdbc:74 - Selecting user by username: AnthonyAarvark
+2018-03-08 10:07:42 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 10:07:42 TRACE UserRepositoryJdbc:99 - Updating balance
+2018-03-08 10:07:42 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 10:07:42 TRACE UserRepositoryJdbc:117 - Getting balance
+2018-03-08 10:07:42 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 10:08:32 TRACE UserRepositoryJdbc:74 - Selecting user by username: AnthonyAardvark
+2018-03-08 10:08:32 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 10:14:50 TRACE UserRepositoryJdbc:74 - Selecting user by username: AnthonyAardvark
+2018-03-08 10:14:50 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 10:15:13 TRACE UserRepositoryJdbc:74 - Selecting user by username: AnthonyAardvark
+2018-03-08 10:15:13 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 10:15:49 TRACE UserRepositoryJdbc:74 - Selecting user by username:AnthonyAardvark:
+2018-03-08 10:15:49 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 12:05:23 TRACE UserRepositoryJdbc:74 - Selecting user by username:AnthonyAardvark:
+2018-03-08 12:05:23 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 12:05:24 TRACE ServiceUtil:28 - 
+2018-03-08 12:06:10 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-08 12:06:10 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 12:06:11 ERROR UserRepositoryJdbc:43 - Exception thrown while inserting new User
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (BANKING_DB.PK_USERS) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.insertUser(UserRepositoryJdbc.java:38)
+	at com.revature.repository.UserRepositoryJdbc.main(UserRepositoryJdbc.java:150)
+2018-03-08 12:06:11 TRACE UserRepositoryJdbc:50 - Selecting all users
+2018-03-08 12:06:11 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 12:06:11 TRACE UserRepositoryJdbc:74 - Selecting user by username:AnthonyAarvark:
+2018-03-08 12:06:11 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 12:06:11 TRACE UserRepositoryJdbc:88 - User [Username=AnthonyAarvark, Balance=100.0]
+2018-03-08 12:06:11 TRACE UserRepositoryJdbc:103 - Updating balance
+2018-03-08 12:06:11 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 12:06:12 TRACE UserRepositoryJdbc:121 - Getting balance
+2018-03-08 12:06:12 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 12:06:45 TRACE UserRepositoryJdbc:74 - Selecting user by username:AnthonyAardvark:
+2018-03-08 12:06:45 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 12:06:46 TRACE ServiceUtil:28 - 
+2018-03-08 12:13:02 TRACE UserRepositoryJdbc:74 - Selecting user by username:AnthonyAardvark:
+2018-03-08 12:13:02 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 12:13:03 TRACE ServiceUtil:28 - 
+2018-03-08 12:14:47 TRACE UserRepositoryJdbc:74 - Selecting user by username:AnthonyAardvark:
+2018-03-08 12:14:47 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 12:14:48 TRACE UserRepositoryJdbc:82 - get fields
+2018-03-08 12:14:48 TRACE UserRepositoryJdbc:99 - Return null
+2018-03-08 12:14:48 TRACE ServiceUtil:28 - 
+2018-03-08 12:14:50 TRACE UserRepositoryJdbc:74 - Selecting user by username:AnthonyAardvark:
+2018-03-08 12:14:50 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 12:14:51 TRACE UserRepositoryJdbc:82 - get fields
+2018-03-08 12:14:51 TRACE UserRepositoryJdbc:99 - Return null
+2018-03-08 12:14:51 TRACE ServiceUtil:28 - 
+2018-03-08 12:15:29 TRACE UserRepositoryJdbc:74 - Selecting user by username:AnthonyAarvark:
+2018-03-08 12:15:29 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 12:15:30 TRACE UserRepositoryJdbc:82 - get fields
+2018-03-08 12:15:30 TRACE UserRepositoryJdbc:89 - User [Username=AnthonyAarvark, Balance=100.0]
+2018-03-08 12:15:30 TRACE ServiceUtil:28 - User [Username=AnthonyAarvark, Balance=100.0]
+2018-03-08 12:16:34 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-08 12:16:34 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 12:16:35 INFO  UserRepositoryJdbc:39 - Insert success
+2018-03-08 12:16:35 TRACE UserRepositoryJdbc:50 - Selecting all users
+2018-03-08 12:16:35 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 12:16:35 TRACE UserRepositoryJdbc:74 - Selecting user by username:AnthonyAarvark:
+2018-03-08 12:16:35 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 12:16:36 TRACE UserRepositoryJdbc:82 - get fields
+2018-03-08 12:16:36 TRACE UserRepositoryJdbc:99 - Return null
+2018-03-08 12:16:36 TRACE UserRepositoryJdbc:105 - Updating balance
+2018-03-08 12:16:36 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 12:16:36 TRACE UserRepositoryJdbc:123 - Getting balance
+2018-03-08 12:16:36 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 12:17:12 TRACE UserRepositoryJdbc:74 - Selecting user by username: AnthonyAarvark
+2018-03-08 12:17:12 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 12:17:13 TRACE ServiceUtil:28 - 
+2018-03-08 12:17:31 TRACE UserRepositoryJdbc:74 - Selecting user by username: AnthonyAardvark
+2018-03-08 12:17:31 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 12:17:32 TRACE ServiceUtil:28 - User [Username=AnthonyAardvark, Balance=100.0]
+2018-03-08 12:18:02 TRACE UserRepositoryJdbc:74 - Selecting user by username: AnthonyAardvark
+2018-03-08 12:18:02 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 12:18:03 TRACE ServiceUtil:28 - User [Username=AnthonyAardvark, Balance=100.0]
+2018-03-08 12:24:18 TRACE UserRepositoryJdbc:74 - Selecting user by username: AnthonyAardvark
+2018-03-08 12:24:18 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 12:24:18 TRACE ServiceUtil:28 - User [Username=AnthonyAardvark, Balance=100.0]
+2018-03-08 12:24:24 ERROR ServiceUtil:49 - Not logged in
+2018-03-08 12:24:29 TRACE UserRepositoryJdbc:74 - Selecting user by username: AnthonyAardvark
+2018-03-08 12:24:29 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 12:24:29 TRACE ServiceUtil:28 - User [Username=AnthonyAardvark, Balance=100.0]
+2018-03-08 12:24:34 ERROR ServiceUtil:49 - Not logged in
+2018-03-08 12:27:38 TRACE UserRepositoryJdbc:74 - Selecting user by username: AnthonyAardvark
+2018-03-08 12:27:38 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 12:27:39 TRACE ServiceUtil:28 - User [Username=AnthonyAardvark, Balance=100.0]
+2018-03-08 12:27:55 TRACE UserRepositoryJdbc:74 - Selecting user by username: AnthonyAardvark
+2018-03-08 12:27:55 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 12:27:56 TRACE ServiceUtil:28 - User [Username=AnthonyAardvark, Balance=100.0]
+2018-03-08 12:28:05 ERROR ServiceUtil:50 - Not logged in
+2018-03-08 12:29:08 TRACE UserRepositoryJdbc:74 - Selecting user by username: AnthonyAardvark
+2018-03-08 12:29:08 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 12:29:09 TRACE ServiceUtil:28 - User [Username=AnthonyAardvark, Balance=100.0]
+2018-03-08 12:29:17 ERROR ServiceUtil:51 - Not logged in
+2018-03-08 12:30:02 TRACE UserRepositoryJdbc:74 - Selecting user by username: AnthonyAardvark
+2018-03-08 12:30:02 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 12:30:02 TRACE ServiceUtil:28 - User [Username=AnthonyAardvark, Balance=100.0]
+2018-03-08 12:30:04 ERROR ServiceUtil:51 - Not logged in
+2018-03-08 12:31:54 TRACE UserRepositoryJdbc:74 - Selecting user by username: AnthonyAardvark
+2018-03-08 12:31:54 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 12:31:56 TRACE ServiceUtil:28 - User [Username=AnthonyAardvark, Balance=100.0]
+2018-03-08 12:32:03 ERROR ServiceUtil:51 - Not logged in
+2018-03-08 12:32:58 TRACE UserRepositoryJdbc:74 - Selecting user by username: AnthonyAardvark
+2018-03-08 12:32:58 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 12:32:59 TRACE ServiceUtil:32 - User [Username=AnthonyAardvark, Balance=100.0]
+2018-03-08 12:33:04 ERROR ServiceUtil:55 - Not logged in
+2018-03-08 12:34:34 TRACE UserRepositoryJdbc:74 - Selecting user by username: AnthonyAardvark
+2018-03-08 12:34:34 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 12:34:35 TRACE ServiceUtil:32 - User [Username=AnthonyAardvark, Balance=100.0]
+2018-03-08 12:34:35 ERROR ServiceUtil:55 - Not logged in
+2018-03-08 12:35:35 TRACE UserRepositoryJdbc:74 - Selecting user by username: AnthonyAardvark
+2018-03-08 12:35:35 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 12:35:36 TRACE ServiceUtil:34 - User [Username=AnthonyAardvark, Balance=100.0]
+2018-03-08 12:35:36 TRACE ServiceUtil:70 - 
+2018-03-08 12:35:36 ERROR ServiceUtil:57 - Not logged in
+2018-03-08 12:37:06 TRACE UserRepositoryJdbc:74 - Selecting user by username: AnthonyAardvark
+2018-03-08 12:37:06 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 12:37:07 TRACE ServiceUtil:34 - User [Username=AnthonyAardvark, Balance=100.0]
+2018-03-08 12:37:07 TRACE ServiceUtil:70 - 
+2018-03-08 12:37:07 ERROR ServiceUtil:57 - Not logged in
+2018-03-08 12:37:57 TRACE UserRepositoryJdbc:74 - Selecting user by username: AnthonyAardvark
+2018-03-08 12:37:57 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 12:37:58 TRACE ServiceUtil:34 - User [Username=AnthonyAardvark, Balance=100.0]
+2018-03-08 12:38:21 TRACE UserRepositoryJdbc:74 - Selecting user by username: AnthonyAardvark
+2018-03-08 12:38:21 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 12:38:22 TRACE ServiceUtil:34 - User [Username=AnthonyAardvark, Balance=100.0]
+2018-03-08 12:38:22 TRACE ServiceUtil:37 - User [Username=AnthonyAardvark, Balance=100.0]
+2018-03-08 12:38:22 TRACE ServiceUtil:69 - User [Username=AnthonyAardvark, Balance=100.0]
+2018-03-08 12:38:22 TRACE ServiceUtil:70 - User [Username=AnthonyAardvark, Balance=100.0]
+2018-03-08 12:38:22 TRACE UserRepositoryJdbc:102 - Updating balance
+2018-03-08 12:38:22 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 12:39:47 TRACE UserRepositoryJdbc:74 - Selecting user by username: AnthonyAardvark
+2018-03-08 12:39:47 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 12:39:48 TRACE ServiceUtil:34 - User [Username=AnthonyAardvark, Balance=100.0]
+2018-03-08 12:39:48 TRACE ServiceUtil:37 - User [Username=AnthonyAardvark, Balance=100.0]
+2018-03-08 12:39:53 TRACE UserRepositoryJdbc:102 - Updating balance
+2018-03-08 12:39:53 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 12:46:31 TRACE UserRepositoryJdbc:74 - Selecting user by username: AnthonyAardvark
+2018-03-08 12:46:31 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 12:46:32 TRACE ServiceUtil:79 - User [Username=AnthonyAardvark, Balance=110.0]
+2018-03-08 12:46:32 TRACE ServiceUtil:80 - User [Username=AnthonyAardvark, Balance=110.0]
+2018-03-08 12:46:32 TRACE UserRepositoryJdbc:120 - Getting balance
+2018-03-08 12:46:32 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 12:58:59 TRACE UserRepositoryJdbc:74 - Selecting user by username: AnthonyAardvark
+2018-03-08 12:58:59 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 12:59:01 TRACE ServiceUtil:97 - User [Username=AnthonyAardvark, Balance=110.0]
+2018-03-08 12:59:01 TRACE ServiceUtil:98 - User [Username=AnthonyAardvark, Balance=110.0]
+2018-03-08 12:59:01 TRACE UserRepositoryJdbc:102 - Updating balance
+2018-03-08 12:59:01 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 12:59:01 TRACE UserRepositoryJdbc:120 - Getting balance
+2018-03-08 12:59:01 TRACE ConnectionUtil:14 - Getting connection
+2018-03-08 12:59:01 TRACE UserRepositoryJdbc:102 - Updating balance
+2018-03-08 12:59:01 TRACE ConnectionUtil:14 - Getting connection

@@ -70,18 +70,21 @@ public class UserRepositoryJdbc implements UserRepository {
 	}
 
 	@Override
-	public User findUserByUsername(String username) {
-		logger.trace("Selecting user by username");
+	public User getUserByUsername(String username) {
+		logger.trace("Selecting user by username: " + username);
 		try (Connection connection = ConnectionUtil.getConnection()) {
 			int parameterIndex = 0;
 			String sql = "SELECT * FROM USERS WHERE U_USERNAME = ?";
 
 			PreparedStatement statement = connection.prepareStatement(sql);
 			statement.setString(++parameterIndex, username);
-
 			ResultSet result = statement.executeQuery();
-
 			if (result.next()) {
+				User user = new User(
+						result.getString("U_USERNAME"),
+						result.getString("U_PASSWORD"),
+						result.getDouble("U_BALANCE")
+						);
 				return new User(
 						result.getString("U_USERNAME"),
 						result.getString("U_PASSWORD"),
@@ -105,11 +108,32 @@ public class UserRepositoryJdbc implements UserRepository {
 			statement.setDouble(++parameterIndex, balance);
 			statement.setString(++parameterIndex, user.getUsername());
 
-			return statement.executeUpdate() > 0;
+			return (statement.executeUpdate() > 0);
 		} catch (SQLException e) {
 			logger.error("Exception thrown while updating balance", e);
 		}
 		return false;
+	}
+	
+	@Override
+	public double getBalance(User user) {
+		logger.trace("Getting balance");
+		try (Connection connection = ConnectionUtil.getConnection()) {
+			int parameterIndex = 0;
+			String sql = "SELECT U_BALANCE FROM USERS WHERE U_USERNAME = ?";
+
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setString(++parameterIndex, user.getUsername());
+			
+			ResultSet result = statement.executeQuery();
+
+			if (result.next()) {
+				return result.getDouble("U_BALANCE");
+			}
+		} catch (SQLException e) {
+			logger.error("Exception thrown while getting balance", e);
+		}
+		return 0;
 	}
 
 	@Override
@@ -121,11 +145,12 @@ public class UserRepositoryJdbc implements UserRepository {
 	public static void main(String[] args) {
 		UserRepository repository = UserRepositoryJdbc.getInstance();
 
-		User a = new User("AnthonyAarvark", "c1l95!T2Yvy*t!C");
-		repository.insertUser(a);
+		User user = new User("AnthonyAardvark", "password1");
+		repository.insertUser(user);
 		System.out.println(repository.selectAllUsers());
-		System.out.println(repository.findUserByUsername("AnthonyAarvark"));
-		System.out.println(repository.updateBalance(a, 100d));
+		System.out.println(repository.getUserByUsername("AnthonyAarvark"));
+		System.out.println(repository.updateBalance(user, 100d));
+		System.out.println(repository.getBalance(user));
 	}
 
 }

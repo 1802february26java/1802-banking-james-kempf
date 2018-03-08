@@ -28,22 +28,8 @@ public class User {
 		return balance;
 	}
 
-	public void deposit(double sum) {
-		if (sum > 0) {
-			balance += sum;
-			transactions.add("Deposit: " + sum + " - " + LocalDateTime.now());
-		}
-	}
-	
-	public void withdraw(double sum) throws InsufficientBalanceException {
-		if (sum > 0) {
- 			if (balance >= sum) {
-				balance -= sum;
-				transactions.add("Withdraw: " + sum + " - " + LocalDateTime.now());
-			} else {
-				throw new InsufficientBalanceException("Insufficient Balance: " + balance);
-			}
-		}
+	public void setBalance(double balance) {
+		this.balance = balance;
 	}
 	
 	public String getUsername() {

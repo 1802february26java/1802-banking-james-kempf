@@ -7,10 +7,12 @@ import java.util.Scanner;
 import com.revature.exception.InsufficientBalanceException;
 import com.revature.exception.InvalidCredentialsException;
 import com.revature.model.User;
+import com.revature.service.ServiceUtil;
 
 public class Controller {
 
 	private static final Controller controller = new Controller();
+	private ServiceUtil serviceUtil = ServiceUtil.getInstance();
 	private HashMap<String, User> users;
 	private User currentUser;
 	
@@ -33,20 +35,21 @@ public class Controller {
 				break;
 			case "login":
 				if (command.length == 3) {
-					login(command[1], command[2]);
+					currentUser = serviceUtil.login(command[1], command[2]);
 				} else {
 					System.out.println("Invalid Parameters");
 				}
 				break;
 			case "logout":
-				logout();
+				serviceUtil.logout();
 				break;
 			case "balance":
 				viewBalance();
 				break;
 			case "deposit":
+				System.out.println(serviceUtil.getUser());
 				if (command.length == 2) {
-					deposit(Double.parseDouble(command[1]));
+					serviceUtil.deposit(Double.parseDouble(command[1]));
 				} else {
 					System.out.println("Invalid Parameters");
 				}
@@ -63,7 +66,7 @@ public class Controller {
 				break;
 			case "exit":
 				if (currentUser != null) {
-					logout();
+					serviceUtil.logout();
 				}
 				System.exit(0);
 				break;
@@ -88,37 +91,6 @@ public class Controller {
 		}
 	}
 	
-	// Log in user. Checks username and password
-	public boolean login(String username, String password) {
-		try {
-			User u = users.get(username);
-			if (currentUser == u) {
-				System.out.println("Already Logged In");
-			} else if (u.authenticate(username, password)) {
-				currentUser = u;
-				System.out.println("Login Successful");
-				return true;
-			}
-		} catch (InvalidCredentialsException e) {
-			System.out.println(e.getMessage());
-		} catch (NullPointerException e) {
-			System.out.println("Invalid Credentials");
-		}
-		return false;
-	}
-	
-	// Set current user to null
-	public boolean logout() {
-		if (currentUser == null) {
-			System.out.println("Already Logged Out");
-			return false;
-		} else {
-			currentUser = null;
-			System.out.println("Logout Successful");
-			return true;
-		}
-	}
-	
 	// Prints balance of current user
 	public void viewBalance() {
 		if (currentUser == null) {
@@ -128,20 +100,6 @@ public class Controller {
 		}
 	}
 	
-	// Deposit sum for current user
-	public boolean deposit(double sum) {
-		if (currentUser == null) {
-			System.out.println("Please login");
-		} else if(sum <= 0) {
-			System.out.println("Insufficient Sum");
-		} else {
-			currentUser.deposit(sum);
-			System.out.println("Deposit Successful");
-			return true;
-		}
-		return false;
-	}
-	
 	// Withdraw a sum from current user
 	public boolean withdraw(double sum) {
 		if (currentUser == null) {
@@ -149,13 +107,9 @@ public class Controller {
 		} else if (sum <= 0) {
 			System.out.println("Insufficient Sum");
 		} else {
-			try {
-				currentUser.withdraw(sum);
-				System.out.println("Withdraw Successful");
-				return true;
-			} catch (InsufficientBalanceException e) {
-				System.out.println(e.getMessage());
-			}
+			currentUser.setBalance(sum);
+			System.out.println("Withdraw Successful");
+			return true;
 		}
 		return false;
 	}
