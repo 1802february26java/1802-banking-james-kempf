@@ -99,11 +99,6 @@ public class UserRepositoryJdbc implements UserRepository {
 			statement.setString(++parameterIndex, username);
 			ResultSet result = statement.executeQuery();
 			if (result.next()) {
-				User user = new User(
-						result.getString("U_USERNAME"),
-						result.getString("U_PASSWORD"),
-						result.getDouble("U_BALANCE")
-						);
 				return new User(
 						result.getString("U_USERNAME"),
 						result.getString("U_PASSWORD"),
@@ -153,16 +148,5 @@ public class UserRepositoryJdbc implements UserRepository {
 			logger.error("Exception thrown while getting balance", e);
 		}
 		return 0;
-	}
-
-	public static void main(String[] args) {
-		UserRepository repository = UserRepositoryJdbc.getInstance();
-
-		User user = new User("AnthonyAardvark", "password1");
-		repository.insertUser("AnthonyAardvark", "password1");
-		System.out.println(repository.selectAllUsers());
-		System.out.println(repository.getUserByUsername("AnthonyAarvark"));
-		System.out.println(repository.updateBalance(user, 100d));
-		System.out.println(repository.getBalance(user));
 	}
 }

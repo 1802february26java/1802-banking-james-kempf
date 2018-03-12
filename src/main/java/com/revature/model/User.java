@@ -1,11 +1,5 @@
 package com.revature.model;
 
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-
-import com.revature.exception.InsufficientBalanceException;
-import com.revature.exception.InvalidCredentialsException;
-
 public class User {
 
 	private String username;

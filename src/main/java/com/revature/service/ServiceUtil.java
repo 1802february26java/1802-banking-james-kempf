@@ -123,24 +123,4 @@ public class ServiceUtil {
 	public void deleteUser(String username) {
 		repository.deleteUser(username);
 	}
-	
-	public static void main(String[] args) throws InvalidCredentialsException {
-		ServiceUtil service = ServiceUtil.getInstance();
-		logger.trace(service.login("AnthonyAardvark", "password1").toString());
-		logger.trace(service.getUser());
-		try {
-			service.deposit(100);
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
-		}
-		service.getBalance();
-		try {
-			service.withdraw(100);
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
-		}
-		
-		
-		service.logout();
-	}
 }
