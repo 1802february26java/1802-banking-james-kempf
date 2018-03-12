@@ -28,7 +28,11 @@ public class Controller {
 				break;
 			case "login":
 				if (command.length == 3) {
-					serviceUtil.login(command[1], command[2]);
+					try {
+						serviceUtil.login(command[1], command[2]);
+					} catch (Exception e) {
+						System.out.println(e.getMessage());
+					}
 				} else {
 					System.out.println("Invalid parameters");
 				}
@@ -62,9 +66,6 @@ public class Controller {
 					System.out.println("Invalid parameters");
 				}
 				break;
-//			case "transactions":
-//				printTransactions();
-//				break;
 			case "exit":
 				if (serviceUtil.getUser() != null) {
 					serviceUtil.logout();
@@ -76,6 +77,5 @@ public class Controller {
 				break;
 			}
 		}
-		input.close();
 	}
 }

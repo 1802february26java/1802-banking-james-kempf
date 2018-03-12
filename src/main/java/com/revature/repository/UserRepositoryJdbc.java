@@ -51,7 +51,7 @@ public class UserRepositoryJdbc implements UserRepository {
 		logger.trace("Deleteing user");
 		try (Connection connection = ConnectionUtil.getConnection()) {
 			int parameterIndex = 0;
-			String sql = "DLETE FROM USERS WHERE U_USERNAME = ?";
+			String sql = "DELETE FROM USERS WHERE U_USERNAME = ?";
 
 			PreparedStatement statement = connection.prepareStatement(sql);
 			statement.setString(++parameterIndex, username);
@@ -153,11 +153,6 @@ public class UserRepositoryJdbc implements UserRepository {
 			logger.error("Exception thrown while getting balance", e);
 		}
 		return 0;
-	}
-
-	@Override
-	public void transactions() {
-		// TODO Auto-generated method stub
 	}
 
 	public static void main(String[] args) {

@@ -3624,3 +3624,2424 @@ java.sql.SQLSyntaxErrorException: ORA-00900: invalid SQL statement
 	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
 	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
 	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-12 10:23:44 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:23:44 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:23:45 ERROR UserRepositoryJdbc:44 - Exception thrown while inserting new User
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (BANKING_DB.PK_USERS) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.insertUser(UserRepositoryJdbc.java:39)
+	at com.revature.service.ServiceUtil.register(ServiceUtil.java:32)
+	at com.revature.tests.Tests.registerNewUser(Tests.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-12 10:23:45 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:23:45 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:23:46 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:23:46 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:23:46 TRACE UserRepositoryJdbc:121 - Updating balance
+2018-03-12 10:23:46 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:23:46 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:23:46 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:23:46 ERROR UserRepositoryJdbc:63 - Exception thrown while deleting User
+java.sql.SQLSyntaxErrorException: ORA-00900: invalid SQL statement
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.deleteUser(UserRepositoryJdbc.java:59)
+	at com.revature.service.ServiceUtil.deleteUser(ServiceUtil.java:123)
+	at com.revature.tests.Tests.deleteUser(Tests.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-12 10:24:29 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:24:29 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:24:30 ERROR UserRepositoryJdbc:44 - Exception thrown while inserting new User
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (BANKING_DB.PK_USERS) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.insertUser(UserRepositoryJdbc.java:39)
+	at com.revature.service.ServiceUtil.register(ServiceUtil.java:32)
+	at com.revature.tests.Tests.registerNewUser(Tests.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-12 10:24:30 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:24:30 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:24:31 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:24:31 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:24:31 TRACE UserRepositoryJdbc:121 - Updating balance
+2018-03-12 10:24:31 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:24:31 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:24:31 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:24:31 ERROR UserRepositoryJdbc:63 - Exception thrown while deleting User
+java.sql.SQLSyntaxErrorException: ORA-00900: invalid SQL statement
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.deleteUser(UserRepositoryJdbc.java:59)
+	at com.revature.service.ServiceUtil.deleteUser(ServiceUtil.java:123)
+	at com.revature.tests.Tests.deleteUser(Tests.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-12 10:24:59 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:24:59 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:00 ERROR UserRepositoryJdbc:44 - Exception thrown while inserting new User
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (BANKING_DB.PK_USERS) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.insertUser(UserRepositoryJdbc.java:39)
+	at com.revature.service.ServiceUtil.register(ServiceUtil.java:32)
+	at com.revature.tests.Tests.registerNewUser(Tests.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-12 10:25:00 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:25:00 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:00 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:25:00 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:01 ERROR UserRepositoryJdbc:63 - Exception thrown while deleting User
+java.sql.SQLSyntaxErrorException: ORA-00900: invalid SQL statement
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.deleteUser(UserRepositoryJdbc.java:59)
+	at com.revature.service.ServiceUtil.deleteUser(ServiceUtil.java:123)
+	at com.revature.tests.Tests.deleteUser(Tests.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-12 10:25:01 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:25:01 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:01 ERROR UserRepositoryJdbc:44 - Exception thrown while inserting new User
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (BANKING_DB.PK_USERS) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.insertUser(UserRepositoryJdbc.java:39)
+	at com.revature.service.ServiceUtil.register(ServiceUtil.java:32)
+	at com.revature.tests.Tests.registerNewUser(Tests.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-12 10:25:01 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:25:01 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:01 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:25:01 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:01 ERROR UserRepositoryJdbc:63 - Exception thrown while deleting User
+java.sql.SQLSyntaxErrorException: ORA-00900: invalid SQL statement
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.deleteUser(UserRepositoryJdbc.java:59)
+	at com.revature.service.ServiceUtil.deleteUser(ServiceUtil.java:123)
+	at com.revature.tests.Tests.deleteUser(Tests.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-12 10:25:01 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:25:01 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:01 ERROR UserRepositoryJdbc:44 - Exception thrown while inserting new User
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (BANKING_DB.PK_USERS) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.insertUser(UserRepositoryJdbc.java:39)
+	at com.revature.service.ServiceUtil.register(ServiceUtil.java:32)
+	at com.revature.tests.Tests.registerNewUser(Tests.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-12 10:25:01 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:25:01 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:01 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:25:01 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:01 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:25:01 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:01 ERROR UserRepositoryJdbc:63 - Exception thrown while deleting User
+java.sql.SQLSyntaxErrorException: ORA-00900: invalid SQL statement
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.deleteUser(UserRepositoryJdbc.java:59)
+	at com.revature.service.ServiceUtil.deleteUser(ServiceUtil.java:123)
+	at com.revature.tests.Tests.deleteUser(Tests.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-12 10:25:02 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:25:02 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:02 ERROR UserRepositoryJdbc:44 - Exception thrown while inserting new User
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (BANKING_DB.PK_USERS) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.insertUser(UserRepositoryJdbc.java:39)
+	at com.revature.service.ServiceUtil.register(ServiceUtil.java:32)
+	at com.revature.tests.Tests.registerNewUser(Tests.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-12 10:25:02 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:25:02 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:02 TRACE UserRepositoryJdbc:121 - Updating balance
+2018-03-12 10:25:02 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:02 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:25:02 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:02 ERROR UserRepositoryJdbc:63 - Exception thrown while deleting User
+java.sql.SQLSyntaxErrorException: ORA-00900: invalid SQL statement
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.deleteUser(UserRepositoryJdbc.java:59)
+	at com.revature.service.ServiceUtil.deleteUser(ServiceUtil.java:123)
+	at com.revature.tests.Tests.deleteUser(Tests.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-12 10:25:02 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:25:02 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:02 ERROR UserRepositoryJdbc:44 - Exception thrown while inserting new User
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (BANKING_DB.PK_USERS) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.insertUser(UserRepositoryJdbc.java:39)
+	at com.revature.service.ServiceUtil.register(ServiceUtil.java:32)
+	at com.revature.tests.Tests.registerNewUser(Tests.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-12 10:25:02 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:25:02 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:02 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:25:02 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:02 ERROR UserRepositoryJdbc:63 - Exception thrown while deleting User
+java.sql.SQLSyntaxErrorException: ORA-00900: invalid SQL statement
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.deleteUser(UserRepositoryJdbc.java:59)
+	at com.revature.service.ServiceUtil.deleteUser(ServiceUtil.java:123)
+	at com.revature.tests.Tests.deleteUser(Tests.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-12 10:25:02 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:25:02 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:03 ERROR UserRepositoryJdbc:44 - Exception thrown while inserting new User
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (BANKING_DB.PK_USERS) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.insertUser(UserRepositoryJdbc.java:39)
+	at com.revature.service.ServiceUtil.register(ServiceUtil.java:32)
+	at com.revature.tests.Tests.registerNewUser(Tests.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-12 10:25:03 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:25:03 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:03 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:25:03 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:03 ERROR UserRepositoryJdbc:63 - Exception thrown while deleting User
+java.sql.SQLSyntaxErrorException: ORA-00900: invalid SQL statement
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.deleteUser(UserRepositoryJdbc.java:59)
+	at com.revature.service.ServiceUtil.deleteUser(ServiceUtil.java:123)
+	at com.revature.tests.Tests.deleteUser(Tests.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-12 10:25:03 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:25:03 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:03 ERROR UserRepositoryJdbc:44 - Exception thrown while inserting new User
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (BANKING_DB.PK_USERS) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.insertUser(UserRepositoryJdbc.java:39)
+	at com.revature.service.ServiceUtil.register(ServiceUtil.java:32)
+	at com.revature.tests.Tests.registerNewUser(Tests.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-12 10:25:03 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:25:03 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:03 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:25:03 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:03 ERROR UserRepositoryJdbc:63 - Exception thrown while deleting User
+java.sql.SQLSyntaxErrorException: ORA-00900: invalid SQL statement
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.deleteUser(UserRepositoryJdbc.java:59)
+	at com.revature.service.ServiceUtil.deleteUser(ServiceUtil.java:123)
+	at com.revature.tests.Tests.deleteUser(Tests.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-12 10:25:03 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:25:03 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:03 ERROR UserRepositoryJdbc:44 - Exception thrown while inserting new User
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (BANKING_DB.PK_USERS) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.insertUser(UserRepositoryJdbc.java:39)
+	at com.revature.service.ServiceUtil.register(ServiceUtil.java:32)
+	at com.revature.tests.Tests.registerNewUser(Tests.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-12 10:25:03 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:25:03 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:03 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:25:03 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:03 ERROR UserRepositoryJdbc:63 - Exception thrown while deleting User
+java.sql.SQLSyntaxErrorException: ORA-00900: invalid SQL statement
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.deleteUser(UserRepositoryJdbc.java:59)
+	at com.revature.service.ServiceUtil.deleteUser(ServiceUtil.java:123)
+	at com.revature.tests.Tests.deleteUser(Tests.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-12 10:25:03 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:25:04 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:04 ERROR UserRepositoryJdbc:44 - Exception thrown while inserting new User
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (BANKING_DB.PK_USERS) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.insertUser(UserRepositoryJdbc.java:39)
+	at com.revature.service.ServiceUtil.register(ServiceUtil.java:32)
+	at com.revature.tests.Tests.registerNewUser(Tests.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-12 10:25:04 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:25:04 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:04 TRACE UserRepositoryJdbc:121 - Updating balance
+2018-03-12 10:25:04 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:04 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:25:04 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:04 ERROR UserRepositoryJdbc:63 - Exception thrown while deleting User
+java.sql.SQLSyntaxErrorException: ORA-00900: invalid SQL statement
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.deleteUser(UserRepositoryJdbc.java:59)
+	at com.revature.service.ServiceUtil.deleteUser(ServiceUtil.java:123)
+	at com.revature.tests.Tests.deleteUser(Tests.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-12 10:25:35 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:25:35 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:36 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:25:36 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:25:36 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:36 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:25:36 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:36 ERROR UserRepositoryJdbc:63 - Exception thrown while deleting User
+java.sql.SQLSyntaxErrorException: ORA-00900: invalid SQL statement
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.deleteUser(UserRepositoryJdbc.java:59)
+	at com.revature.service.ServiceUtil.deleteUser(ServiceUtil.java:123)
+	at com.revature.tests.Tests.deleteUser(Tests.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-12 10:25:36 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:25:36 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:36 ERROR UserRepositoryJdbc:44 - Exception thrown while inserting new User
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (BANKING_DB.PK_USERS) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.insertUser(UserRepositoryJdbc.java:39)
+	at com.revature.service.ServiceUtil.register(ServiceUtil.java:32)
+	at com.revature.tests.Tests.registerNewUser(Tests.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-12 10:25:36 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:25:36 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:36 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:25:36 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:37 ERROR UserRepositoryJdbc:63 - Exception thrown while deleting User
+java.sql.SQLSyntaxErrorException: ORA-00900: invalid SQL statement
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.deleteUser(UserRepositoryJdbc.java:59)
+	at com.revature.service.ServiceUtil.deleteUser(ServiceUtil.java:123)
+	at com.revature.tests.Tests.deleteUser(Tests.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-12 10:25:37 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:25:37 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:37 ERROR UserRepositoryJdbc:44 - Exception thrown while inserting new User
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (BANKING_DB.PK_USERS) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.insertUser(UserRepositoryJdbc.java:39)
+	at com.revature.service.ServiceUtil.register(ServiceUtil.java:32)
+	at com.revature.tests.Tests.registerNewUser(Tests.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-12 10:25:37 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:25:37 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:37 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:25:37 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:37 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:25:37 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:37 ERROR UserRepositoryJdbc:63 - Exception thrown while deleting User
+java.sql.SQLSyntaxErrorException: ORA-00900: invalid SQL statement
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.deleteUser(UserRepositoryJdbc.java:59)
+	at com.revature.service.ServiceUtil.deleteUser(ServiceUtil.java:123)
+	at com.revature.tests.Tests.deleteUser(Tests.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-12 10:25:37 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:25:37 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:37 ERROR UserRepositoryJdbc:44 - Exception thrown while inserting new User
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (BANKING_DB.PK_USERS) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.insertUser(UserRepositoryJdbc.java:39)
+	at com.revature.service.ServiceUtil.register(ServiceUtil.java:32)
+	at com.revature.tests.Tests.registerNewUser(Tests.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-12 10:25:37 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:25:37 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:37 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:25:37 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:37 ERROR UserRepositoryJdbc:63 - Exception thrown while deleting User
+java.sql.SQLSyntaxErrorException: ORA-00900: invalid SQL statement
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.deleteUser(UserRepositoryJdbc.java:59)
+	at com.revature.service.ServiceUtil.deleteUser(ServiceUtil.java:123)
+	at com.revature.tests.Tests.deleteUser(Tests.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-12 10:25:37 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:25:37 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:38 ERROR UserRepositoryJdbc:44 - Exception thrown while inserting new User
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (BANKING_DB.PK_USERS) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.insertUser(UserRepositoryJdbc.java:39)
+	at com.revature.service.ServiceUtil.register(ServiceUtil.java:32)
+	at com.revature.tests.Tests.registerNewUser(Tests.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-12 10:25:38 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:25:38 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:38 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:25:38 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:38 ERROR UserRepositoryJdbc:63 - Exception thrown while deleting User
+java.sql.SQLSyntaxErrorException: ORA-00900: invalid SQL statement
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.deleteUser(UserRepositoryJdbc.java:59)
+	at com.revature.service.ServiceUtil.deleteUser(ServiceUtil.java:123)
+	at com.revature.tests.Tests.deleteUser(Tests.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-12 10:25:38 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:25:38 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:38 ERROR UserRepositoryJdbc:44 - Exception thrown while inserting new User
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (BANKING_DB.PK_USERS) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.insertUser(UserRepositoryJdbc.java:39)
+	at com.revature.service.ServiceUtil.register(ServiceUtil.java:32)
+	at com.revature.tests.Tests.registerNewUser(Tests.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-12 10:25:38 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:25:38 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:38 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:25:38 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:38 ERROR UserRepositoryJdbc:63 - Exception thrown while deleting User
+java.sql.SQLSyntaxErrorException: ORA-00900: invalid SQL statement
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.deleteUser(UserRepositoryJdbc.java:59)
+	at com.revature.service.ServiceUtil.deleteUser(ServiceUtil.java:123)
+	at com.revature.tests.Tests.deleteUser(Tests.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-12 10:25:38 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:25:38 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:38 ERROR UserRepositoryJdbc:44 - Exception thrown while inserting new User
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (BANKING_DB.PK_USERS) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.insertUser(UserRepositoryJdbc.java:39)
+	at com.revature.service.ServiceUtil.register(ServiceUtil.java:32)
+	at com.revature.tests.Tests.registerNewUser(Tests.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-12 10:25:38 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:25:38 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:38 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:25:38 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:39 ERROR UserRepositoryJdbc:63 - Exception thrown while deleting User
+java.sql.SQLSyntaxErrorException: ORA-00900: invalid SQL statement
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.deleteUser(UserRepositoryJdbc.java:59)
+	at com.revature.service.ServiceUtil.deleteUser(ServiceUtil.java:123)
+	at com.revature.tests.Tests.deleteUser(Tests.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-12 10:25:39 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:25:39 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:39 ERROR UserRepositoryJdbc:44 - Exception thrown while inserting new User
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (BANKING_DB.PK_USERS) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.insertUser(UserRepositoryJdbc.java:39)
+	at com.revature.service.ServiceUtil.register(ServiceUtil.java:32)
+	at com.revature.tests.Tests.registerNewUser(Tests.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-12 10:25:39 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:25:39 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:39 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:25:39 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:39 ERROR UserRepositoryJdbc:63 - Exception thrown while deleting User
+java.sql.SQLSyntaxErrorException: ORA-00900: invalid SQL statement
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.deleteUser(UserRepositoryJdbc.java:59)
+	at com.revature.service.ServiceUtil.deleteUser(ServiceUtil.java:123)
+	at com.revature.tests.Tests.deleteUser(Tests.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-12 10:25:39 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:25:39 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:39 ERROR UserRepositoryJdbc:44 - Exception thrown while inserting new User
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (BANKING_DB.PK_USERS) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.insertUser(UserRepositoryJdbc.java:39)
+	at com.revature.service.ServiceUtil.register(ServiceUtil.java:32)
+	at com.revature.tests.Tests.registerNewUser(Tests.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-12 10:25:39 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:25:39 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:39 TRACE UserRepositoryJdbc:121 - Updating balance
+2018-03-12 10:25:39 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:39 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:25:39 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:25:39 ERROR UserRepositoryJdbc:63 - Exception thrown while deleting User
+java.sql.SQLSyntaxErrorException: ORA-00900: invalid SQL statement
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.deleteUser(UserRepositoryJdbc.java:59)
+	at com.revature.service.ServiceUtil.deleteUser(ServiceUtil.java:123)
+	at com.revature.tests.Tests.deleteUser(Tests.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-12 10:27:47 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:27:47 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:27:48 ERROR UserRepositoryJdbc:44 - Exception thrown while inserting new User
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (BANKING_DB.PK_USERS) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserRepositoryJdbc.insertUser(UserRepositoryJdbc.java:39)
+	at com.revature.service.ServiceUtil.register(ServiceUtil.java:32)
+	at com.revature.tests.Tests.registerNewUser(Tests.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+2018-03-12 10:27:48 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:27:48 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:27:48 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:27:48 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:27:48 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:27:48 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:27:48 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:27:49 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:27:49 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:27:49 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:27:49 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:27:49 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:27:49 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:27:49 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:27:49 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:27:49 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:27:49 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:27:49 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:27:49 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:27:49 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:27:49 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:27:49 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:27:49 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:27:49 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:27:49 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:27:50 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:27:50 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:27:50 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:27:50 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:27:50 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:27:50 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:27:50 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:27:50 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:27:50 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:27:50 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:27:50 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:27:50 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:27:50 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:27:50 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:27:50 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:27:50 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:27:50 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:27:50 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:27:50 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:27:50 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:27:50 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:27:50 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:27:50 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:27:50 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:27:51 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:27:51 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:27:51 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:27:51 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:27:51 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:27:51 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:27:51 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:27:51 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:27:51 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:27:51 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:27:51 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:27:51 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:27:51 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:27:51 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:27:51 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:27:51 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:27:51 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:27:51 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:27:51 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:27:51 TRACE UserRepositoryJdbc:121 - Updating balance
+2018-03-12 10:27:51 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:27:52 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:27:52 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:27:52 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:28:08 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:28:08 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:09 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:28:09 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:28:09 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:09 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:28:09 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:09 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:28:09 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:28:09 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:09 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:28:09 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:28:09 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:09 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:28:09 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:09 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:28:09 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:28:09 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:10 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:28:10 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:28:10 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:10 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:28:10 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:10 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:28:10 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:10 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:28:10 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:28:10 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:10 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:28:10 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:28:10 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:10 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:28:10 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:10 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:28:10 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:28:10 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:11 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:28:11 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:28:11 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:11 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:28:11 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:11 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:28:11 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:28:11 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:11 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:28:11 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:28:11 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:11 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:28:11 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:11 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:28:11 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:28:11 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:11 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:28:11 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:28:11 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:11 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:28:11 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:11 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:28:11 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:28:11 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:12 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:28:12 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:28:12 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:12 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:28:12 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:12 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:28:12 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:28:12 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:12 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:28:12 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:28:12 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:12 TRACE UserRepositoryJdbc:121 - Updating balance
+2018-03-12 10:28:12 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:12 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:28:12 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:12 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:28:43 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:28:43 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:44 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:28:44 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:28:44 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:45 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:28:45 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:45 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:28:45 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:28:45 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:45 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:28:45 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:28:45 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:45 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:28:45 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:45 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:28:45 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:28:45 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:45 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:28:45 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:28:45 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:45 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:28:45 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:45 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:28:45 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:46 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:28:46 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:28:46 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:46 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:28:46 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:28:46 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:46 TRACE UserRepositoryJdbc:121 - Updating balance
+2018-03-12 10:28:46 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:46 TRACE UserRepositoryJdbc:121 - Updating balance
+2018-03-12 10:28:46 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:46 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:28:46 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:46 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:28:46 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:28:46 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:46 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:28:46 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:28:46 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:46 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:28:46 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:47 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:28:47 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:28:47 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:47 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:28:47 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:28:47 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:47 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:28:47 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:47 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:28:47 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:28:47 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:47 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:28:47 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:28:47 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:47 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:28:47 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:47 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:28:47 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:28:47 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:47 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:28:47 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:28:47 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:47 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:28:47 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:48 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:28:48 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:28:48 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:48 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:28:48 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:28:48 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:48 TRACE UserRepositoryJdbc:121 - Updating balance
+2018-03-12 10:28:48 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:48 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:28:48 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:28:48 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:29:00 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:29:00 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:29:01 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:29:01 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:29:01 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:29:01 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:29:01 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:29:01 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:29:01 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:29:01 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:29:01 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:29:01 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:29:01 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:29:01 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:29:01 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:29:01 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:29:01 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:29:01 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:29:01 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:29:01 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:29:01 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:29:01 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:29:01 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:29:02 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:29:02 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:29:02 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:29:02 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:29:02 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:29:02 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:29:02 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:29:02 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:29:02 TRACE UserRepositoryJdbc:121 - Updating balance
+2018-03-12 10:29:02 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:29:02 TRACE UserRepositoryJdbc:121 - Updating balance
+2018-03-12 10:29:02 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:29:02 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:29:02 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:29:02 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:29:02 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:29:02 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:29:02 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:29:02 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:29:02 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:29:02 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:29:02 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:29:03 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:29:03 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:29:03 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:29:03 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:29:03 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:29:03 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:29:03 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:29:03 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:29:03 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:29:03 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:29:03 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:29:03 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:29:03 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:29:03 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:29:03 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:29:03 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:29:03 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:29:03 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:29:03 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:29:03 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:29:03 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:29:03 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:29:03 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:29:03 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:29:04 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:29:04 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:29:04 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:29:04 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:29:04 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:29:04 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:29:04 TRACE UserRepositoryJdbc:121 - Updating balance
+2018-03-12 10:29:04 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:29:04 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:29:04 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:29:04 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:30:03 TRACE UserRepositoryJdbc:93 - Selecting user by username: BorisBuffalo
+2018-03-12 10:30:03 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:31:15 TRACE UserRepositoryJdbc:93 - Selecting user by username: AnthonyAardvark
+2018-03-12 10:31:15 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:31:24 TRACE UserRepositoryJdbc:93 - Selecting user by username: BorrisBuffalo
+2018-03-12 10:31:24 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:31:34 TRACE UserRepositoryJdbc:93 - Selecting user by username: fdsa
+2018-03-12 10:31:34 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:32:12 TRACE UserRepositoryJdbc:93 - Selecting user by username: fdsa
+2018-03-12 10:32:12 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:32:23 TRACE UserRepositoryJdbc:93 - Selecting user by username: BorrisBuffalo
+2018-03-12 10:32:23 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:32:24 TRACE UserRepositoryJdbc:139 - Getting balance
+2018-03-12 10:32:24 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:32:29 TRACE UserRepositoryJdbc:139 - Getting balance
+2018-03-12 10:32:29 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:32:39 TRACE UserRepositoryJdbc:121 - Updating balance
+2018-03-12 10:32:39 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:32:41 TRACE UserRepositoryJdbc:139 - Getting balance
+2018-03-12 10:32:41 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:32:45 TRACE UserRepositoryJdbc:121 - Updating balance
+2018-03-12 10:32:45 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:32:48 TRACE UserRepositoryJdbc:139 - Getting balance
+2018-03-12 10:32:48 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:32:57 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:32:57 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:32:57 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:33:02 TRACE UserRepositoryJdbc:93 - Selecting user by username: 123
+2018-03-12 10:33:02 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:33:05 TRACE UserRepositoryJdbc:139 - Getting balance
+2018-03-12 10:33:05 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:34:07 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:34:07 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:34:07 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:34:07 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:34:07 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:34:08 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:34:08 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:34:08 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:34:08 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:34:08 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:34:08 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:34:08 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:34:08 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:34:08 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:34:08 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:34:08 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:34:08 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:34:08 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:34:08 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:34:08 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:34:08 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:34:08 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:34:08 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:34:09 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:34:09 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:34:09 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:34:09 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:34:09 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:34:09 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:34:09 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:34:09 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:34:09 TRACE UserRepositoryJdbc:121 - Updating balance
+2018-03-12 10:34:09 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:34:09 TRACE UserRepositoryJdbc:121 - Updating balance
+2018-03-12 10:34:09 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:34:09 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:34:09 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:34:09 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:34:09 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:34:09 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:34:09 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:34:09 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:34:09 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:34:09 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:34:09 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:34:10 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:34:10 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:34:10 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:34:10 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:34:10 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:34:10 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:34:10 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:34:10 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:34:10 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:34:10 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:34:10 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:34:10 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:34:10 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:34:10 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:34:10 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:34:10 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:34:10 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:34:10 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:34:10 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:34:10 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:34:10 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:34:10 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:34:11 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:34:11 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:34:11 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:34:11 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:34:11 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:34:11 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:34:11 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:34:11 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:34:11 TRACE UserRepositoryJdbc:121 - Updating balance
+2018-03-12 10:34:11 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:34:11 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:34:11 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:34:11 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:35:52 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:35:52 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:35:53 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:35:53 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:35:53 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:35:53 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:35:53 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:35:54 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:35:54 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:35:54 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:35:54 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:35:54 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:35:54 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:35:54 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:35:54 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:35:54 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:35:54 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:35:54 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:35:54 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:35:54 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:35:54 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:35:54 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:35:54 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:35:54 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:35:54 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:35:54 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:35:54 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:35:54 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:35:55 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:35:55 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:35:55 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:35:55 TRACE UserRepositoryJdbc:121 - Updating balance
+2018-03-12 10:35:55 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:35:55 TRACE UserRepositoryJdbc:121 - Updating balance
+2018-03-12 10:35:55 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:35:55 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:35:55 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:35:55 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:35:55 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:35:55 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:35:55 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:35:55 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:35:55 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:35:55 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:35:55 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:35:55 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:35:55 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:35:55 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:35:56 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:35:56 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:35:56 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:35:56 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:35:56 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:35:56 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:35:56 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:35:56 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:35:56 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:35:56 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:35:56 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:35:56 TRACE UserRepositoryJdbc:93 - Selecting user by username: Invalid
+2018-03-12 10:35:56 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:35:56 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:35:56 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:35:57 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:35:57 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:35:57 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:35:57 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:35:57 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:35:57 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:35:57 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:35:57 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:35:57 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:35:57 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:35:57 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:35:57 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:35:57 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:35:57 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:35:58 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:35:58 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:35:58 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:35:58 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:35:58 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:35:58 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:35:58 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:35:58 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:35:58 TRACE UserRepositoryJdbc:121 - Updating balance
+2018-03-12 10:35:58 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:35:58 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:35:58 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:35:58 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:40:32 TRACE UserRepositoryJdbc:93 - Selecting user by username: 123
+2018-03-12 10:40:32 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:40:46 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:40:46 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:40:47 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:40:47 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:40:47 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:40:47 TRACE UserRepositoryJdbc:121 - Updating balance
+2018-03-12 10:40:47 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:40:47 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:40:47 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:40:47 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:41:00 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:41:00 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:41:02 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:41:02 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:41:02 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:41:02 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:41:02 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:41:03 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:41:03 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:41:03 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:41:03 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:41:03 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:41:03 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:41:03 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:41:03 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:41:03 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:41:03 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:41:03 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:41:03 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:41:03 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:41:03 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:41:03 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:41:03 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:41:03 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:41:03 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:41:04 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:41:04 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:41:04 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:41:04 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:41:04 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:41:04 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:41:04 TRACE UserRepositoryJdbc:121 - Updating balance
+2018-03-12 10:41:04 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:41:04 TRACE UserRepositoryJdbc:121 - Updating balance
+2018-03-12 10:41:04 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:41:04 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:41:04 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:41:04 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:41:04 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:41:04 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:41:04 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:41:04 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:41:04 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:41:04 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:41:04 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:41:04 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:41:04 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:41:04 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:41:05 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:41:05 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:41:05 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:41:05 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:41:05 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:41:05 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:41:05 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:41:05 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:41:05 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:41:05 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:41:05 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:41:05 TRACE UserRepositoryJdbc:93 - Selecting user by username: Invalid
+2018-03-12 10:41:05 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:41:05 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:41:05 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:41:05 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:41:05 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:41:05 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:41:05 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:41:05 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:41:05 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:41:06 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:41:06 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:41:06 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:41:06 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:41:06 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:41:06 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:41:06 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:41:06 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:41:06 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:41:06 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:41:06 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:41:06 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:41:06 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:41:06 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:41:06 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:41:06 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:41:06 TRACE UserRepositoryJdbc:121 - Updating balance
+2018-03-12 10:41:06 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:41:06 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:41:06 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:41:06 INFO  UserRepositoryJdbc:60 - Delete success

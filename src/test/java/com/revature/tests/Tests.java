@@ -7,6 +7,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.revature.exception.InsufficientBalanceException;
+import com.revature.exception.InvalidCredentialsException;
 import com.revature.model.User;
 import com.revature.service.ServiceUtil;
 
@@ -17,7 +18,7 @@ public class Tests {
 	private String password = "password26";
 	
 	@Before
-	public void registerNewUser() {
+	public void registerNewUser() throws InvalidCredentialsException {
 		serviceUtil.register(username, password);
 		serviceUtil.login(username, password);
 	}
@@ -29,13 +30,19 @@ public class Tests {
 	}
 	
 	@Test
-	public void testValidLogin() {
-		assertEquals(new User("ZeldaZebra", "password26", 100), serviceUtil.login(username, password));
+	public void testValidLogin() throws InvalidCredentialsException {
+		assertEquals(new User("ZeldaZebra", "password26", 0), serviceUtil.login(username, password));
+	}
+	
+	@Test(expected = InvalidCredentialsException.class)
+	public void testInalidLogin() throws InvalidCredentialsException {
+		serviceUtil.logout();
+		serviceUtil.login("Invalid", "Credentials");
 	}
 	
 	@Test
 	public void testValidDeposit() throws InsufficientBalanceException {
-		assertEquals(100d, serviceUtil.deposit(10), 0);
+		assertEquals(10d, serviceUtil.deposit(10), 0);
 	}
 	
 	@Test(expected = InsufficientBalanceException.class)
@@ -50,6 +57,7 @@ public class Tests {
 	
 	@Test
 	public void testValidWithdrawal() throws InsufficientBalanceException {
+		serviceUtil.deposit(100);
 		assertEquals(90d, serviceUtil.withdraw(10), 0);
 	}
 	

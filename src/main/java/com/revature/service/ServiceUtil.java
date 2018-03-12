@@ -3,6 +3,7 @@ package com.revature.service;
 import org.apache.log4j.Logger;
 
 import com.revature.exception.InsufficientBalanceException;
+import com.revature.exception.InvalidCredentialsException;
 import com.revature.model.User;
 import com.revature.repository.UserRepository;
 import com.revature.repository.UserRepositoryJdbc;
@@ -41,15 +42,15 @@ public class ServiceUtil {
 	/**
 	 * Authenticate user with username and password
 	 */
-	public User login(String username, String password) {
+	public User login(String username, String password) throws InvalidCredentialsException {
 		User user = repository.getUserByUsername(username);
-		if (user.getPassword().equals(password)) {
+		if (user != null && user.getPassword().equals(password)) {
 			currentUser = user;
 			System.out.println("Login successful");
 			return user;
+		} else {
+			throw new InvalidCredentialsException("Invalid credentials");
 		}
-		System.out.println("Invalid credentials");
-		return null;
 	}
 	
 	/**
@@ -123,7 +124,7 @@ public class ServiceUtil {
 		repository.deleteUser(username);
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InvalidCredentialsException {
 		ServiceUtil service = ServiceUtil.getInstance();
 		logger.trace(service.login("AnthonyAardvark", "password1").toString());
 		logger.trace(service.getUser());

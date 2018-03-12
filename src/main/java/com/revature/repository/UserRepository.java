@@ -35,9 +35,4 @@ public interface UserRepository {
 	 * Get the current balance for user
 	 */
 	public double getBalance(User user);
-	
-	/**
-	 * view all transactions of current user
-	 */
-	public void transactions();
 }
