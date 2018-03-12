@@ -24,8 +24,9 @@ public class UserRepositoryJdbc implements UserRepository {
 	}
 
 	@Override
-	public boolean insertUser(User user) {
+	public User insertUser(String username, String password) {
 		logger.trace("Inserting new user");
+		User user = new User(username, password);
 		try (Connection connection = ConnectionUtil.getConnection()) {
 			int parameterIndex = 0;
 			String sql = "INSERT INTO USERS(U_USERNAME, U_PASSWORD, U_BALANCE) VALUES(?,?,?)";
@@ -37,12 +38,30 @@ public class UserRepositoryJdbc implements UserRepository {
 
 			if (statement.executeUpdate() > 0) {
 				logger.info("Insert success");
-				return true;
+				return user;
 			}
 		} catch (SQLException e) {
 			logger.error("Exception thrown while inserting new User", e);
 		}
-		return false;
+		return null;
+	}
+	
+	@Override
+	public void deleteUser(String username) {
+		logger.trace("Deleteing user");
+		try (Connection connection = ConnectionUtil.getConnection()) {
+			int parameterIndex = 0;
+			String sql = "DLETE FROM USERS WHERE U_USERNAME = ?";
+
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setString(++parameterIndex, username);
+
+			if (statement.executeUpdate() > 0) {
+				logger.info("Delete success");
+			}
+		} catch (SQLException e) {
+			logger.error("Exception thrown while deleting User", e);
+		}
 	}
 
 	@Override
@@ -139,18 +158,16 @@ public class UserRepositoryJdbc implements UserRepository {
 	@Override
 	public void transactions() {
 		// TODO Auto-generated method stub
-
 	}
 
 	public static void main(String[] args) {
 		UserRepository repository = UserRepositoryJdbc.getInstance();
 
 		User user = new User("AnthonyAardvark", "password1");
-		repository.insertUser(user);
+		repository.insertUser("AnthonyAardvark", "password1");
 		System.out.println(repository.selectAllUsers());
 		System.out.println(repository.getUserByUsername("AnthonyAarvark"));
 		System.out.println(repository.updateBalance(user, 100d));
 		System.out.println(repository.getBalance(user));
 	}
-
 }

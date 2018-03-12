@@ -9,7 +9,12 @@ public interface UserRepository {
 	/**
 	 * Insert new user into in the database
 	 */
-	public boolean insertUser(User user);
+	public User insertUser(String username, String password);
+	
+	/**
+	 * Delete user (for testing)
+	 */
+	public void deleteUser(String username);
 	
 	/**
 	 * Select all users form the database
