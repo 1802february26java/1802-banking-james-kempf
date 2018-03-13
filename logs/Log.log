@@ -6045,3 +6045,151 @@ java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint 
 2018-03-12 10:41:06 TRACE UserRepositoryJdbc:51 - Deleteing user
 2018-03-12 10:41:06 TRACE ConnectionUtil:14 - Getting connection
 2018-03-12 10:41:06 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:51:42 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:51:42 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:51:44 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:51:44 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:51:44 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:51:44 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:51:44 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:51:44 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:51:44 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:51:44 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:51:44 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:51:44 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:51:44 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:51:44 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:51:44 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:51:44 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:51:44 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:51:44 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:51:44 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:51:44 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:51:44 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:51:44 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:51:44 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:51:45 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:51:45 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:51:45 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:51:45 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:51:45 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:51:45 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:51:45 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:51:45 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:51:45 TRACE UserRepositoryJdbc:116 - Updating balance
+2018-03-12 10:51:45 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:51:45 TRACE UserRepositoryJdbc:116 - Updating balance
+2018-03-12 10:51:45 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:51:45 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:51:45 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:51:45 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:51:45 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:51:45 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:51:45 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:51:45 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:51:45 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:51:45 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:51:45 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:51:46 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:51:46 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:51:46 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:51:46 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:51:46 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:51:46 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:51:46 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:51:46 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:51:46 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:51:46 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:51:46 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:51:46 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:51:46 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:51:46 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:51:46 TRACE UserRepositoryJdbc:93 - Selecting user by username: Invalid
+2018-03-12 10:51:46 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:51:46 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:51:46 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:51:46 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:51:46 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:51:46 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:51:47 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:51:47 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:51:47 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:51:47 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:51:47 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:51:47 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:51:47 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:51:47 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:51:47 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:51:47 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:51:47 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:51:47 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:51:47 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:51:47 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-12 10:51:47 TRACE UserRepositoryJdbc:28 - Inserting new user
+2018-03-12 10:51:47 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:51:47 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-12 10:51:47 TRACE UserRepositoryJdbc:93 - Selecting user by username: ZeldaZebra
+2018-03-12 10:51:47 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:51:47 TRACE UserRepositoryJdbc:116 - Updating balance
+2018-03-12 10:51:47 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:51:48 TRACE UserRepositoryJdbc:51 - Deleteing user
+2018-03-12 10:51:48 TRACE ConnectionUtil:14 - Getting connection
+2018-03-12 10:51:48 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-13 08:53:45 TRACE UserRepositoryJdbc:93 - Selecting user by username: BorrisBuffalo
+2018-03-13 08:53:45 TRACE ConnectionUtil:14 - Getting connection
+2018-03-13 09:01:46 TRACE UserRepositoryJdbc:93 - Selecting user by username: BorrisBuffalo
+2018-03-13 09:01:46 TRACE ConnectionUtil:14 - Getting connection
+2018-03-13 09:01:51 TRACE UserRepositoryJdbc:116 - Updating balance
+2018-03-13 09:01:51 TRACE ConnectionUtil:14 - Getting connection
+2018-03-13 09:03:43 TRACE UserRepositoryJdbc:93 - Selecting user by username: BorrisBuffalo
+2018-03-13 09:03:43 TRACE ConnectionUtil:14 - Getting connection
+2018-03-13 09:03:48 TRACE UserRepositoryJdbc:116 - Updating balance
+2018-03-13 09:03:48 TRACE ConnectionUtil:14 - Getting connection
+2018-03-13 09:03:50 TRACE UserRepositoryJdbc:134 - Getting balance
+2018-03-13 09:03:50 TRACE ConnectionUtil:14 - Getting connection
+2018-03-13 09:03:55 TRACE UserRepositoryJdbc:116 - Updating balance
+2018-03-13 09:03:55 TRACE ConnectionUtil:14 - Getting connection
+2018-03-13 09:03:57 TRACE UserRepositoryJdbc:134 - Getting balance
+2018-03-13 09:03:57 TRACE ConnectionUtil:14 - Getting connection
+2018-03-13 09:11:21 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-13 09:17:08 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-13 09:17:09 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-13 09:17:09 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-13 09:17:09 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-13 09:17:10 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-13 09:17:10 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-13 09:17:10 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-13 09:17:10 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-13 09:17:11 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-13 09:17:11 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-13 09:17:11 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-13 09:17:11 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-13 09:17:12 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-13 09:17:12 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-13 09:17:12 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-13 09:17:12 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-13 09:17:12 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-13 09:17:13 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-13 09:17:13 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-13 09:17:13 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-13 09:32:42 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-13 09:33:47 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-13 09:33:47 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-13 09:33:47 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-13 09:33:48 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-13 09:33:48 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-13 09:33:48 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-13 09:33:48 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-13 09:33:49 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-13 09:33:49 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-13 09:33:49 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-13 09:33:49 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-13 09:33:49 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-13 09:33:49 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-13 09:33:50 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-13 09:33:50 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-13 09:33:50 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-13 09:33:50 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-13 09:33:51 INFO  UserRepositoryJdbc:60 - Delete success
+2018-03-13 09:33:51 INFO  UserRepositoryJdbc:40 - Insert success
+2018-03-13 09:33:51 INFO  UserRepositoryJdbc:60 - Delete success

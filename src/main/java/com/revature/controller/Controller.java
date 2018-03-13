@@ -44,7 +44,6 @@ public class Controller {
 				serviceUtil.getBalance();
 				break;
 			case "deposit":
-				System.out.println(serviceUtil.getUser());
 				if (command.length == 2) {
 					try {
 						serviceUtil.deposit(Double.parseDouble(command[1]));

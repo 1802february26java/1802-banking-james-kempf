@@ -80,7 +80,6 @@ public class ServiceUtil {
 	 * returns Updated Balance
 	 */
 	public double deposit(double sum) throws InsufficientBalanceException {
-		System.out.println(currentUser);
 		if (currentUser == null) {
 			System.out.println("Not logged in");
 			return -1;
